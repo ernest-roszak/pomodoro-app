@@ -2,9 +2,9 @@ import React from 'react';
 
 import { GlobalStyle } from 'assets/styles/globalStyles';
 import { theme } from 'assets/styles/theme';
-import TimeBox from 'components/TimeBox/TimeBox';
-import { TimeBoxEditor } from 'components/TimeBoxEditor/TimeBoxEditor';
 import { ThemeProvider } from 'styled-components';
+// import EditableTimeBox from './EditableTimeBox';
+import TimeBoxList from 'components/TimeBoxList/TimeBoxList';
 
 function Root() {
   return (
@@ -12,8 +12,8 @@ function Root() {
       <GlobalStyle />
       <h1>My Pomodoro App</h1>
       <hr />
-      <TimeBoxEditor />
-      <TimeBox />
+      {/* <EditableTimeBox /> */}
+      <TimeBoxList />
     </ThemeProvider>
   );
 }

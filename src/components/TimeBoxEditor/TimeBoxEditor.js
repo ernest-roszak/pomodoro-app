@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -19,18 +19,20 @@ const Button = styled.button`
   margin-left: 10px;
 `;
 
-export const TimeBoxEditor = () => {
+export const TimeBoxEditor = ({ onTotalTimeInMinutesChange, onTitleChange, title, totalTimeInMinutes, isRunning, isEditable, onConfirm }) => {
   return (
-    <Container isBlur>
+    <Container isBlur={isEditable}>
       <div>
         <label>
-          What are you doing? <Input value="Uczę się skrótów" type="text" />
+          What are you doing? <Input disabled={isEditable} onChange={onTitleChange} value={title} type="text" />
         </label>
         <label>
-          How long? <Input value="25" type="number" />
+          How long? <Input disabled={isEditable} onChange={onTotalTimeInMinutesChange} value={totalTimeInMinutes} type="number" />
         </label>
       </div>
-      <Button disabled> Start </Button>
+      <Button disabled={isEditable} onClick={onConfirm}>
+        Submit
+      </Button>
     </Container>
   );
 };
