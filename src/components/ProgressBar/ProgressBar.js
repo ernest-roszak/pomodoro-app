@@ -15,10 +15,10 @@ const Bar = styled.div`
   background-color: ${({ theme }) => theme.colors.orangered};
 `;
 
-export const ProgressBar = ({ process = 30 }) => {
+export const ProgressBar = ({ isPause, percent }) => {
   return (
-    <Container>
-      <Bar style={{ width: `${process}%` }}></Bar>
+    <Container isBlur={isPause}>
+      <Bar style={{ width: `${percent}%` }}></Bar>
     </Container>
   );
 };
