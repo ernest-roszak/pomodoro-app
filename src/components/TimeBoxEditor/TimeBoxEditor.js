@@ -8,6 +8,7 @@ const Container = styled.div`
   margin-bottom: 20px;
   text-align: right;
   filter: ${({ isBlur }) => (isBlur ? 'blur(2px) grayscale(1)' : 'none')};
+  background-color: ${({ theme }) => theme.colors.peterRiver};
 `;
 const Input = styled.input`
   min-width: 60%;

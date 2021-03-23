@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import CurrentTimeBoxTimeBox from 'components/TimeBox/TimeBox';
+import CurrentTimeBox from 'components/TimeBox/TimeBox';
 import { TimeBoxEditor } from 'components/TimeBoxEditor/TimeBoxEditor';
 
 const EditableTimeBox = () => {
@@ -30,7 +30,7 @@ const EditableTimeBox = () => {
   };
 
   return (
-    <>
+    <div>
       <TimeBoxEditor
         onTotalTimeInMinutesChange={handleTimeInMinutesChange}
         onTitleChange={handleTitleChange}
@@ -42,7 +42,7 @@ const EditableTimeBox = () => {
         isRunning={isRunning}
         isEditable={isEditable}
       />
-      <CurrentTimeBoxTimeBox
+      <CurrentTimeBox
         totalTimeInMinutes={totalTimeInMinutes}
         title={title}
         startTimer={startTimer}
@@ -55,7 +55,7 @@ const EditableTimeBox = () => {
         increment={increment}
         setElapsedTimeSeconds={setElapsedTimeSeconds}
       />
-    </>
+    </div>
   );
 };
 

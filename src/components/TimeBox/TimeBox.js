@@ -9,6 +9,7 @@ const Container = styled.div`
   padding: 20px;
   text-align: center;
   filter: ${({ isBlur }) => (isBlur ? 'blur(2px) grayscale(1)' : 'none')};
+  background-color: ${({ theme }) => theme.colors.sunFlower};
 `;
 const Button = styled.button`
   font-size: 16px;

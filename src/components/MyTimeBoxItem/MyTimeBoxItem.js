@@ -6,6 +6,7 @@ const Container = styled.div`
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 10px;
+  background-color: ${({ theme }) => theme.colors.alizarin};
 `;
 const Button = styled.button`
   font-size: 16px;

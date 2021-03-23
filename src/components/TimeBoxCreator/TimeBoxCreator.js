@@ -6,9 +6,10 @@ const Container = styled.div`
   border: 1px solid gray;
   border-radius: 5px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   text-align: right;
   filter: ${({ isBlur }) => (isBlur ? 'blur(2px) grayscale(1)' : 'none')};
+  background-color: ${({ theme }) => theme.colors.nephaeritis};
 `;
 
 const Input = styled.input`

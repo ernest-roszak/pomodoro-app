@@ -23,7 +23,7 @@ const TimeBoxList = () => {
     setTimeboxes(timeboxes.map((myTimebox, index) => (index === indexToUpdate ? updatedTimebox : myTimebox)));
   };
   return (
-    <>
+    <div>
       <TimeBoxCreator onCreate={handleCreate} />
       {timeboxes.map((el, index) => (
         <MyTimeBoxItem
@@ -34,7 +34,7 @@ const TimeBoxList = () => {
           onEdit={() => updateMyTimebox(index, { title: 'xxx', totalTimeInMinutes: 12 })}
         />
       ))}
-    </>
+    </div>
   );
 };
 
